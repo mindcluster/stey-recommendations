@@ -14,6 +14,14 @@ class EmployeeService:
 
         for employee in employees:
             print(employee)
-            best_employees.append(employee['EMAIL'])
+            best_employees.append({
+                "id": employee['ID'],
+                "name": employee['NOME'],
+                "score": self.get_score(employee),
+                "job": employee['JOB_TITLE']
+            })
 
         return best_employees
+
+    def get_score(self, employee): # TODO: implement method
+        return 96
