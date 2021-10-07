@@ -23,5 +23,5 @@ class EmployeeService:
 
         return best_employees
 
-    def get_score(self, employee): # TODO: implement method
+    def get_score(self, employee):  # TODO: implement method
         return 96
