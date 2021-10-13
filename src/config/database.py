@@ -1,11 +1,16 @@
+import os
 import mysql.connector
-import pymysql
+
+HOST_DB = os.environ.get('HOST_DB')
+USERNAME_DB = os.environ.get('USERNAME_DB')
+PASSWORD_DB = os.environ.get('PASSWORD_DB')
+DATABASE_DB = os.environ.get('DATABASE_DB')
 
 mydb = mysql.connector.connect(
-    host="localhost",
-    user="user_stey",
-    password="123456",
-    database="stey_db"
+    host=HOST_DB,
+    user=USERNAME_DB,
+    password=PASSWORD_DB,
+    database=DATABASE_DB
 )
 
 
