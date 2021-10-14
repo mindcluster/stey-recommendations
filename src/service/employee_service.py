@@ -13,7 +13,7 @@ class EmployeeService:
         self.employeeModel = EmployeeModel()
 
     def get_all(self):
-        employees = self.db.get("SELECT * FROM EMPLOYEES;")
+        employees = self.db.get("SELECT * FROM EMPLOYEES WHERE ID > 1;")
 
         best_employees = []
 
